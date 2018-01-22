@@ -10,8 +10,8 @@ package:
 source:
   fn: sandwich_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/sandwich_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/sandwich/sandwich_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/sandwich_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/sandwich/sandwich_{{ version }}.tar.gz
   sha256: 34315b9ced76a3ed109aead7b8f77eea6398a6eb2e1ad71515a48bed9808ccc0
 
 
