@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: sandwich_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/sandwich_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sandwich/sandwich_{{ version }}.tar.gz
@@ -27,6 +26,7 @@ build:
 # Suggests: AER, car, geepack, lattice, lmtest, MASS, multiwayvcov, pcse, plm, pscl, scatterplot3d, stats4, strucchange, survival
 requirements:
   build:
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
